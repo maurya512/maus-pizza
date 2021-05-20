@@ -1,5 +1,6 @@
 // import dependencies
 import { Switch, Route } from 'react-router-dom'
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 // import files
 import './App.css';
@@ -14,11 +15,14 @@ function App() {
     <>
       <Switch>
         {/* set different paths for each component */}
-        <Route path='/' component={Home} />
-        <Route path='/menu' component={Menu} />
-        <Route path='/specials' component={Specials} />
-        <Route path='/challenges' component={Challenges} />
-        <Route path='/contact' component={Contact} />
+        {/* The browser will look for an exact path to render */}
+        <Route exact path='/' component={Home} />
+        <Route exact path='/menu' component={Menu} />
+        <Route exact path='/specials' component={Specials} />
+        <Route exact path='/challenges' component={Challenges} />
+        <Route exact path='/contact' component={Contact} />
+        {/* Redirect the user to homepage if no matching exact route is hit */}
+        <Redirect to='/' />
       </Switch>
     </>
   );
