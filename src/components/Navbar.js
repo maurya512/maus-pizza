@@ -1,6 +1,5 @@
 // import react and other dependencies
 import React from 'react'
-import { Nav } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min'
 
 // import a pre loaded navbar class from bootstrap
@@ -9,8 +8,11 @@ function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand" to="/home">
-                        <img src="logo.jpg" alt="" width="30" height="24" />
+                    <NavLink activeClassName="menu_active" exact className="logo-image" to="/home">
+                        {/* div to hold the logo image */}
+                        <div className="logo-image">
+                            <img src="logo.jpg" alt="" width="30" height="24" />
+                        </div>
                     </NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -18,13 +20,13 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className="nav-link" aria-current="page" to="/home">Home</NavLink>
+                                <NavLink activeClassName="menu_active" exact className="nav-link" to="/home">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/menu">Menu</NavLink>
+                                <NavLink activeClassName="menu_active" exact className="nav-link" to="/menu">Menu</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/ourstory">Our Story</NavLink>
+                                <NavLink activeClassName="menu_active" exact className="nav-link" to="/ourstory">Our Story</NavLink>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,13 +34,15 @@ function Navbar() {
           </a>
                                 {/* dropdown menu that links to the specials and challenges component */}
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><NavLink className="dropdown-item" to='/specials'>Specials</NavLink></li>
-                                    <li><NavLink className="dropdown-item" to="/challenges">Challenges</NavLink></li>
+                                    <li><NavLink activeClassName="menu_active" exact className="dropdown-item" to='/specials'>Specials</NavLink></li>
+                                    <li><NavLink
+                                        activeClassName="menu_active" exact
+                                        className="dropdown-item" to="/challenges">Challenges</NavLink></li>
                                 </ul>
                             </li>
                             {/* contact component */}
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                                <NavLink activeClassName="menu_active" exact className="nav-link" to="/contact">Contact</NavLink>
                             </li>
                         </ul>
                     </div>
