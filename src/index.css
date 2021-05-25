@@ -13,10 +13,23 @@
   background-color: #fff !important;
 }
 
-.navbar-brand {
-  font-size: 1.3rem !important;
+.navbar a{
+  font-size: 1.3rem;
   /* transforms the first letter of each word into Uppercase */
   text-transform: capitalize;
+}
+
+/* logo image */
+.logo-image{
+  width: 40px;
+  height: 50x;
+  margin-top: -6px;
+  border-radius: 50%;
+}
+
+.navbar-brand {
+  font-size: 1.9rem !important;
+  color: green !important;
 }
 
 .menu_active {
@@ -71,5 +84,41 @@ main landing section
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
-  
+  border-radius: 50px;
+  transition: 0.5s;
+  color: green;
+  border: 2px solid green;
+  text-transform: none;
+}
+
+#header .btn-get-started:hover {
+  background: orange;
+  color: #fff;
+}
+
+.header-img {
+  text-align: right;
+}
+
+/* animation for the page */
+#header .animated {
+  animation: right-left 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes right-left {
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes right-left {
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }
