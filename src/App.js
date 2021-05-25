@@ -11,12 +11,13 @@ import Contact from './components/Contact';
 import Home from './components/Home';
 import Menu from './components/Menu';
 import Navbar from './components/Navbar';
+import OurStory from './components/OurStory';
 import Specials from './components/Specials';
 
 function App() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Switch>
         {/* set different paths for each component */}
         {/* The browser will look for an exact path to render */}
@@ -25,6 +26,7 @@ function App() {
         <Route exact path='/specials' component={Specials} />
         <Route exact path='/challenges' component={Challenges} />
         <Route exact path='/contact' component={Contact} />
+        <Route exact path='/ourstory' component={OurStory} />
         {/* Redirect the user to homepage if no matching exact route is hit */}
         <Redirect to='/' />
       </Switch>
