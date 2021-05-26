@@ -2,6 +2,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min'
 
+// imprt files
+import logo from '../../src/images/logo.png'
+
 // import a pre loaded navbar class from bootstrap
 function Navbar() {
     return (
@@ -11,7 +14,7 @@ function Navbar() {
                     <NavLink activeClassName="menu_active" exact className="logo-image" to="/home">
                         {/* div to hold the logo image */}
                         <div className="logo-image">
-                            <img src="logo.jpg" alt="" width="30" height="24" />
+                            <img src={logo} alt="" width="30" height="24" />
                         </div>
                     </NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
