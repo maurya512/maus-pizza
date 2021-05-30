@@ -27,6 +27,7 @@ const Data =
             price: "$19.99/pie",
             price1: "4.99/slice"
         }
+        // add new data for the slots
     ]
 
     // export the data component to be used in other components
