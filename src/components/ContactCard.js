@@ -11,10 +11,11 @@ function ContactCard(props) {
                 <div className="card">
                     <img src={props.imgsrc} class="card-img-top" alt="card img" />
                     <div class="card-body">
-                        <h5 class="card-title font-weight-bold">{props.title}</h5>
+                        {/* <h5 class="card-title font-weight-bold">{props.title}</h5> */}
                         <p class="card-text">{props.address}</p>
+                        <p class="card-text">{props.address1}</p>
                         <p class="card-text">{props.phone}</p>
-                        <NavLink to='/home' class="btn btn-success"></NavLink>
+                        {/* <NavLink to='/home' class="btn btn-success"></NavLink> */}
                     </div>
                 </div>
             </div>
@@ -23,3 +24,4 @@ function ContactCard(props) {
 }
 
 // export the card
+export default ContactCard
